@@ -3,6 +3,8 @@ FROM debian:latest
 RUN apt-get update && \
     apt-get install -y gcc make pkg-config autoconf
 
+RUN apt-get install -y python3
+
 COPY /src/ /app/
 
 WORKDIR /root
@@ -38,4 +40,4 @@ WORKDIR /root
 
 RUN rm -rf libnfc-libnfc-1.7.0 mfcuk-mfcuk-0.3.8 mfoc-mfoc-0.10.7
 
-ENTRYPOINT ["python3", "/app/read_card.py"]
+# ENTRYPOINT ["python3", "/app/read_card.py"]
