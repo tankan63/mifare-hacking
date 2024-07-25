@@ -1,11 +1,12 @@
 import os
 
+
 def main():
     while True:
         # Read input from user
-        print("-"*25)
+        print("-" * 25)
         user_input = input("What would you like to do with your MiFare card? : ")
-        print("-"*25)
+        print("-" * 25)
 
         if user_input == "help":
             print("Commands: \n"
@@ -20,5 +21,6 @@ def main():
         elif user_input == "exit":
             break
 
+
 if __name__ == "__main__":
-    main(
+    main()
