@@ -3,6 +3,8 @@ FROM debian:latest
 RUN apt-get update && \
     apt-get install -y gcc make pkg-config autoconf
 
+COPY /src/ /app/
+
 WORKDIR /root
 
 COPY libnfc-libnfc-1.7.0.tar.gz .
@@ -35,3 +37,5 @@ RUN autoreconf -is && ./configure && make && make install
 WORKDIR /root
 
 RUN rm -rf libnfc-libnfc-1.7.0 mfcuk-mfcuk-0.3.8 mfoc-mfoc-0.10.7
+
+ENTRYPOINT ["python3", "/app/read_card.py"]
