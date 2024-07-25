@@ -29,8 +29,6 @@ def main():
                   "4. help - Show this help message\n"
                   "5. exit - Exit the program\n")
 
-            break
-
 
 if __name__ == "__main__":
     main()
