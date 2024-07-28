@@ -28,7 +28,7 @@ def main():
                 os.system(f"mfoc -k {spec_key} -O {file_num}.mfd")
             else:
                 os.system(f"mfoc -O {file_num}.mfd")
-
+            file_num += 1
         else:
             print("Invalid command! Refer to the list below for your options:\n")
             print("Commands: \n"
