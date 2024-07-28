@@ -14,14 +14,15 @@ def main():
                   "1. info - Get some details about your card\n"
                   "2. read - Read the data from your card\n"
                   "3. crack - Retrieve the keys from your card\n"
-                  "4. help - Show this help message\n"
-                  "5. exit - Exit the program\n")
+                  "4. dump -  Get all the data on the card in hex format\n"
+                  "5. help - Show this help message\n"
+                  "6. exit - Exit the program\n")
         elif user_input == "info":
             # Run nfc-poll to get the card details and print the output
             os.system("nfc-poll -v ")
         elif user_input == "exit":
             break
-        elif user_input == "crack":
+        elif user_input == "dump":
             c_choice = input("Do you have a premade key to try? (y/n): ")
             if c_choice.lower() == "y":
                 spec_key = input("Enter the key: (format: 12 letter hex")
@@ -29,6 +30,8 @@ def main():
             else:
                 os.system(f"mfoc -O {file_num}.mfd")
             file_num += 1
+        elif user_input == "crack":
+            os.system("mfcuk -C -R 0 -v 2")
         else:
             print("Invalid command! Refer to the list below for your options:\n")
             print("Commands: \n"
