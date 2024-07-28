@@ -9,7 +9,7 @@ def main():
         user_input = input("What would you like to do with your MiFare card? : ")
         print("-" * 25)
 
-        if user_input.lower() == "help":
+        if user_input == "help":
             print("Commands: \n"
                   "1. info - Get some details about your card\n"
                   "2. read - Read the data from your card\n"
