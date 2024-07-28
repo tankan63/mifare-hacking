@@ -26,6 +26,9 @@ def main():
             if c_choice.lower() == "y":
                 spec_key = input("Enter the key: (format: 12 letter hex")
                 os.system(f"mfoc -k {spec_key} -O {file_num}.mfd")
+            else:
+                os.system(f"mfoc -O {file_num}.mfd")
+
         else:
             print("Invalid command! Refer to the list below for your options:\n")
             print("Commands: \n"
