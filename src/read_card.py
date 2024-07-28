@@ -34,12 +34,13 @@ def main():
             os.system("mfcuk -C -R 0 -v 2")
         else:
             print("Invalid command! Refer to the list below for your options:\n")
-            print("Commands: \n"
-                  "1. info - Get some details about your card\n"
-                  "2. read - Read the data from your card\n"
-                  "3. crack - Unlock the data from the sectors on your card\n"
-                  "4. help - Show this help message\n"
-                  "5. exit - Exit the program\n")
+         print("Commands: \n"
+               "1. info - Get some details about your card\n"
+               "2. read - Read the data from your card\n"
+               "3. crack - Retrieve the keys from your card\n"
+               "4. dump -  Get all the data on the card in hex format\n"
+               "5. help - Show this help message\n"
+               "6. exit - Exit the program\n")
 
 
 if __name__ == "__main__":
