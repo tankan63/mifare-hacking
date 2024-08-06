@@ -13,3 +13,11 @@ To build the image:
 
 To run the built image with the device attached:
 `docker run -it --rm --device=/dev/ttyUSB0 mifare`
+
+The following commands are available: 
+1. `info` - Get some details about your card (runs `nfc-poll` and will wait till you tap your card) 
+2. `read` - Read the data from your card (runs `hexdump` on a .mfd file)
+3. `crack` - Retrieve the keys from your card (runs `mfcuk` NOTE: This can take a while to run)
+4. `dump` -  Get all the data on the card in hex format (runs `mfoc` and dumps the data to a .mfd file)
+5. `help` - Show this exact help message
+6. `exit` - Exit the program (will also exit the docker container) 
